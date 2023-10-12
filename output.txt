@@ -1,0 +1,710 @@
+Mon Jun  5 00:36:41 UTC 2023
+Linux LinuxMachine 5.15.90.1-microsoft-standard-WSL2 #1 SMP Fri Jan 27 02:56:13 UTC 2023 x86_64 x86_64 x86_64 GNU/Linux
+uid=1000(cssuwbstudent) gid=1000(cssuwbstudent) groups=1000(cssuwbstudent),10(wheel)
+=====================================================
+1. Compiles without warnings with -Wall -Wextra flags
+=====================================================
+=====================================================
+2. Runs and produces correct output
+=====================================================
+Start testStore1
+------------------------------START INVENTORY------------------------------
+D, Schindler's List, 0, Steven Spielberg, 1993
+C, Casablanca, 10, Michael Curtiz, Ingrid Bergman, 8, 1942
+------------------------------END INVENTORY------------------------------
+Transaction History for Customer 1111: Mickey Mouse
+No transactions found.
+Movie not in inventory. Borrow Failed!
+There is no more stock. Borrow Failed
+Transaction History for Customer 1111: Mickey Mouse
+B 1111 D C, Casablanca, 9, Michael Curtiz, Ingrid Bergman, 8, 1942
+
+------------------------------START INVENTORY------------------------------
+D, Schindler's List, 0, Steven Spielberg, 1993
+C, Casablanca, 9, Michael Curtiz, Ingrid Bergman, 8, 1942
+------------------------------END INVENTORY------------------------------
+End testStore1
+Start testStore2
+------------------------------START INVENTORY------------------------------
+F, Sleepless in Seattle, 10, Nora Ephron, 1993
+------------------------------END INVENTORY------------------------------
+Transaction History for Customer 1000: Minnie Mouse
+B 1000 D F, Sleepless in Seattle, 9, Nora Ephron, 1993
+
+Movie not in inventory. Return Failed
+Transaction History for Customer 1000: Minnie Mouse
+B 1000 D F, Sleepless in Seattle, 10, Nora Ephron, 1993
+R 1000 D F, Sleepless in Seattle, 10, Nora Ephron, 1993
+
+Invalid command.
+Invalid movie type
+Customer not found
+------------------------------START INVENTORY------------------------------
+F, Sleepless in Seattle, 10, Nora Ephron, 1993
+------------------------------END INVENTORY------------------------------
+End testStore2
+Start testStore3
+------------------------------START INVENTORY------------------------------
+D, Schindler's List, 10, Steven Spielberg, 1993
+------------------------------END INVENTORY------------------------------
+Movie not in inventory. Return Failed
+You are not borrowing the movie. Return Failed
+Transaction History for Customer 1111: Mickey Mouse
+B 1111 D D, Schindler's List, 10, Steven Spielberg, 1993
+R 1111 D D, Schindler's List, 10, Steven Spielberg, 1993
+
+Invalid command.
+Invalid movie type
+Customer not found
+------------------------------START INVENTORY------------------------------
+D, Schindler's List, 10, Steven Spielberg, 1993
+------------------------------END INVENTORY------------------------------
+End testStore3
+=====================================
+Start testStoreFinal
+Invalid movie type
+Invalid movie type
+------------------------------START INVENTORY------------------------------
+F, Annie Hall, 10, Woody Allen, 1977
+F, Fargo, 10, Joel Coen, 1996
+F, National Lampoon's Animal House, 10, John Landis, 1978
+F, Pirates of the Caribbean, 10, Different Years, 2000
+F, Pirates of the Caribbean, 10, Gore Verbinski, 2003
+F, Sleepless in Seattle, 10, Nora Ephron, 1993
+F, When Harry Met Sally, 10, Rob Reiner, 1989
+F, You've Got Mail, 10, Nora Ephron, 1998
+D, Good Morning Vietnam, 10, Barry Levinson, 1988
+D, Same Director Good Morning Vietnam, 10, Barry Levinson, 1988
+D, Unforgiven, 10, Clint Eastwood, 1992
+D, Good Will Hunting, 10, Gus Van Sant, 2000
+D, Silence of the Lambs, 10, Jonathan Demme, 1991
+D, Dogfight, 10, Nancy Savoca, 1991
+D, King of Hearts, 10, Phillippe De Broca, 1967
+D, Schindler's List, 10, Steven Spielberg, 1993
+C, Holiday, 10, George Cukor, Cary Grant, 9, 1938
+C, Holiday, 10, George Cukor, Katherine Hepburn, 9, 1938
+C, Gone With the Wind, 10, Victor Fleming, Clark Gable, 2, 1939
+C, Gone With the Wind, 10, Victor Fleming, Vivien Leigh, 2, 1939
+C, The Wizard of Oz, 10, Victor Fleming, Judy Garland, 7, 1939
+C, The Philadelphia Story, 10, George Cukor, Cary Grant, 5, 1940
+C, The Philadelphia Story, 10, George Cukor, Katherine Hepburn, 5, 1940
+C, The Maltese Falcon, 10, John Huston, Humphrey Bogart, 10, 1941
+C, Casablanca, 10, Michael Curtiz, Humphrey Bogart, 8, 1942
+C, Casablanca, 10, Michael Curtiz, Ingrid Bergman, 8, 1942
+C, It's a Wonderful Life, 10, Frank Capra, Donna Reed, 11, 1946
+C, It's a Wonderful Life, 10, Frank Capra, James Steward, 11, 1946
+C, A Clockwork Orange, 10, Stanley Kubrick, Malcolm McDowell, 2, 1971
+C, Harold and Maude, 10, Hal Ashby, Ruth Gordon, 3, 1971
+------------------------------END INVENTORY------------------------------
+Transaction History for Customer 1000: Minnie Mouse
+No transactions found.
+Transaction History for Customer 5000: Freddie Frog
+No transactions found.
+Transaction History for Customer 8000: Wally Wacky
+No transactions found.
+Invalid movie type
+Invalid command.
+Invalid command.
+Customer not found
+Movie not in inventory. Borrow Failed!
+There is no more stock. Borrow Failed
+There is no more stock. Borrow Failed
+There is no more stock. Borrow Failed
+Movie not in inventory. Borrow Failed!
+------------------------------START INVENTORY------------------------------
+F, Annie Hall, 9, Woody Allen, 1977
+F, Fargo, 8, Joel Coen, 1996
+F, National Lampoon's Animal House, 9, John Landis, 1978
+F, Pirates of the Caribbean, 10, Different Years, 2000
+F, Pirates of the Caribbean, 10, Gore Verbinski, 2003
+F, Sleepless in Seattle, 9, Nora Ephron, 1993
+F, When Harry Met Sally, 9, Rob Reiner, 1989
+F, You've Got Mail, 9, Nora Ephron, 1998
+D, Good Morning Vietnam, 9, Barry Levinson, 1988
+D, Same Director Good Morning Vietnam, 10, Barry Levinson, 1988
+D, Unforgiven, 9, Clint Eastwood, 1992
+D, Good Will Hunting, 9, Gus Van Sant, 2000
+D, Silence of the Lambs, 9, Jonathan Demme, 1991
+D, Dogfight, 8, Nancy Savoca, 1991
+D, King of Hearts, 9, Phillippe De Broca, 1967
+D, Schindler's List, 9, Steven Spielberg, 1993
+C, Holiday, 9, George Cukor, Cary Grant, 9, 1938
+C, Holiday, 10, George Cukor, Katherine Hepburn, 9, 1938
+C, Gone With the Wind, 10, Victor Fleming, Clark Gable, 2, 1939
+C, Gone With the Wind, 10, Victor Fleming, Vivien Leigh, 2, 1939
+C, The Wizard of Oz, 10, Victor Fleming, Judy Garland, 7, 1939
+C, The Philadelphia Story, 9, George Cukor, Cary Grant, 5, 1940
+C, The Philadelphia Story, 9, George Cukor, Katherine Hepburn, 5, 1940
+C, The Maltese Falcon, 9, John Huston, Humphrey Bogart, 10, 1941
+C, Casablanca, 10, Michael Curtiz, Humphrey Bogart, 8, 1942
+C, Casablanca, 10, Michael Curtiz, Ingrid Bergman, 8, 1942
+C, It's a Wonderful Life, 10, Frank Capra, Donna Reed, 11, 1946
+C, It's a Wonderful Life, 10, Frank Capra, James Steward, 11, 1946
+C, A Clockwork Orange, 9, Stanley Kubrick, Malcolm McDowell, 2, 1971
+C, Harold and Maude, 0, Hal Ashby, Ruth Gordon, 3, 1971
+------------------------------END INVENTORY------------------------------
+Transaction History for Customer 1000: Minnie Mouse
+B 1000 D D, Good Morning Vietnam, 9, Barry Levinson, 1988
+B 1000 D C, The Philadelphia Story, 9, George Cukor, Katherine Hepburn, 5, 1940
+B 1000 D D, Good Will Hunting, 9, Gus Van Sant, 2000
+B 1000 D C, The Philadelphia Story, 9, George Cukor, Cary Grant, 5, 1940
+B 1000 D C, Harold and Maude, 0, Hal Ashby, Ruth Gordon, 3, 1971
+B 1000 Z F, Fargo, 8, Joel Coen, 1996
+
+Transaction History for Customer 1111: Mickey Mouse
+B 1111 D C, A Clockwork Orange, 9, Stanley Kubrick, Malcolm McDowell, 2, 1971
+B 1111 D C, Harold and Maude, 0, Hal Ashby, Ruth Gordon, 3, 1971
+B 1111 D C, The Maltese Falcon, 9, John Huston, Humphrey Bogart, 10, 1941
+B 1111 D C, Holiday, 9, George Cukor, Cary Grant, 9, 1938
+
+Transaction History for Customer 5000: Freddie Frog
+B 5000 D C, Harold and Maude, 0, Hal Ashby, Ruth Gordon, 3, 1971
+R 5000 D C, Harold and Maude, 0, Hal Ashby, Ruth Gordon, 3, 1971
+B 5000 D C, Harold and Maude, 0, Hal Ashby, Ruth Gordon, 3, 1971
+R 5000 D C, Harold and Maude, 0, Hal Ashby, Ruth Gordon, 3, 1971
+B 5000 D C, Harold and Maude, 0, Hal Ashby, Ruth Gordon, 3, 1971
+R 5000 D C, Harold and Maude, 0, Hal Ashby, Ruth Gordon, 3, 1971
+B 5000 D C, Harold and Maude, 0, Hal Ashby, Ruth Gordon, 3, 1971
+
+Transaction History for Customer 8000: Wally Wacky
+B 8000 D F, You've Got Mail, 9, Nora Ephron, 1998
+R 8000 D F, You've Got Mail, 9, Nora Ephron, 1998
+B 8000 D C, Harold and Maude, 0, Hal Ashby, Ruth Gordon, 3, 1971
+B 8000 D C, Harold and Maude, 0, Hal Ashby, Ruth Gordon, 3, 1971
+B 8000 D F, National Lampoon's Animal House, 9, John Landis, 1978
+
+Transaction History for Customer 8888: Porky Pig
+B 8888 D F, Annie Hall, 9, Woody Allen, 1977
+B 8888 D F, When Harry Met Sally, 9, Rob Reiner, 1989
+B 8888 D D, Silence of the Lambs, 9, Jonathan Demme, 1991
+B 8888 D D, Dogfight, 8, Nancy Savoca, 1991
+B 8888 D C, Harold and Maude, 0, Hal Ashby, Ruth Gordon, 3, 1971
+
+End testStoreFinal
+=====================================
+Done.
+=====================================================
+3. clang-tidy warnings are fixed
+=====================================================
+11767 warnings generated.
+23534 warnings generated.
+41172 warnings generated.
+52939 warnings generated.
+72234 warnings generated.
+89892 warnings generated.
+101663 warnings generated.
+115138 warnings generated.
+132750 warnings generated.
+144517 warnings generated.
+165350 warnings generated.
+Suppressed 165350 warnings (165350 in non-user code).
+Use -header-filter=.* to display errors from all non-system headers. Use -system-headers to display errors from system headers as well.
+=====================================================
+4. clang-format does not find any formatting issues
+=====================================================
+Running clang-format on ./Classics.cpp
+Running clang-format on ./Comedy.cpp
+Running clang-format on ./Customer.cpp
+Running clang-format on ./Drama.cpp
+Running clang-format on ./Driver.cpp
+Running clang-format on ./Inventory.cpp
+Running clang-format on ./Movie.cpp
+Running clang-format on ./MovieFactory.cpp
+Running clang-format on ./Transaction.cpp
+Running clang-format on ./main.cpp
+Running clang-format on ./store_test.cpp
+=====================================================
+5. No memory leaks using g++
+=====================================================
+=====================================================
+6. No memory leaks using valgrind, look for "definitely lost" 
+=====================================================
+Start testStore1
+------------------------------START INVENTORY------------------------------
+D, Schindler's List, 0, Steven Spielberg, 1993
+C, Casablanca, 10, Michael Curtiz, Ingrid Bergman, 8, 1942
+------------------------------END INVENTORY------------------------------
+Transaction History for Customer 1111: Mickey Mouse
+No transactions found.
+Movie not in inventory. Borrow Failed!
+There is no more stock. Borrow Failed
+Transaction History for Customer 1111: Mickey Mouse
+B 1111 D C, Casablanca, 9, Michael Curtiz, Ingrid Bergman, 8, 1942
+
+------------------------------START INVENTORY------------------------------
+D, Schindler's List, 0, Steven Spielberg, 1993
+C, Casablanca, 9, Michael Curtiz, Ingrid Bergman, 8, 1942
+------------------------------END INVENTORY------------------------------
+End testStore1
+Start testStore2
+------------------------------START INVENTORY------------------------------
+F, Sleepless in Seattle, 10, Nora Ephron, 1993
+------------------------------END INVENTORY------------------------------
+Transaction History for Customer 1000: Minnie Mouse
+B 1000 D F, Sleepless in Seattle, 9, Nora Ephron, 1993
+
+Movie not in inventory. Return Failed
+Transaction History for Customer 1000: Minnie Mouse
+B 1000 D F, Sleepless in Seattle, 10, Nora Ephron, 1993
+R 1000 D F, Sleepless in Seattle, 10, Nora Ephron, 1993
+
+Invalid command.
+Invalid movie type
+Customer not found
+------------------------------START INVENTORY------------------------------
+F, Sleepless in Seattle, 10, Nora Ephron, 1993
+------------------------------END INVENTORY------------------------------
+End testStore2
+Start testStore3
+------------------------------START INVENTORY------------------------------
+D, Schindler's List, 10, Steven Spielberg, 1993
+------------------------------END INVENTORY------------------------------
+Movie not in inventory. Return Failed
+You are not borrowing the movie. Return Failed
+Transaction History for Customer 1111: Mickey Mouse
+B 1111 D D, Schindler's List, 10, Steven Spielberg, 1993
+R 1111 D D, Schindler's List, 10, Steven Spielberg, 1993
+
+Invalid command.
+Invalid movie type
+Customer not found
+------------------------------START INVENTORY------------------------------
+D, Schindler's List, 10, Steven Spielberg, 1993
+------------------------------END INVENTORY------------------------------
+End testStore3
+=====================================
+Start testStoreFinal
+Invalid movie type
+Invalid movie type
+------------------------------START INVENTORY------------------------------
+F, Annie Hall, 10, Woody Allen, 1977
+F, Fargo, 10, Joel Coen, 1996
+F, National Lampoon's Animal House, 10, John Landis, 1978
+F, Pirates of the Caribbean, 10, Different Years, 2000
+F, Pirates of the Caribbean, 10, Gore Verbinski, 2003
+F, Sleepless in Seattle, 10, Nora Ephron, 1993
+F, When Harry Met Sally, 10, Rob Reiner, 1989
+F, You've Got Mail, 10, Nora Ephron, 1998
+D, Good Morning Vietnam, 10, Barry Levinson, 1988
+D, Same Director Good Morning Vietnam, 10, Barry Levinson, 1988
+D, Unforgiven, 10, Clint Eastwood, 1992
+D, Good Will Hunting, 10, Gus Van Sant, 2000
+D, Silence of the Lambs, 10, Jonathan Demme, 1991
+D, Dogfight, 10, Nancy Savoca, 1991
+D, King of Hearts, 10, Phillippe De Broca, 1967
+D, Schindler's List, 10, Steven Spielberg, 1993
+C, Holiday, 10, George Cukor, Cary Grant, 9, 1938
+C, Holiday, 10, George Cukor, Katherine Hepburn, 9, 1938
+C, Gone With the Wind, 10, Victor Fleming, Clark Gable, 2, 1939
+C, Gone With the Wind, 10, Victor Fleming, Vivien Leigh, 2, 1939
+C, The Wizard of Oz, 10, Victor Fleming, Judy Garland, 7, 1939
+C, The Philadelphia Story, 10, George Cukor, Cary Grant, 5, 1940
+C, The Philadelphia Story, 10, George Cukor, Katherine Hepburn, 5, 1940
+C, The Maltese Falcon, 10, John Huston, Humphrey Bogart, 10, 1941
+C, Casablanca, 10, Michael Curtiz, Humphrey Bogart, 8, 1942
+C, Casablanca, 10, Michael Curtiz, Ingrid Bergman, 8, 1942
+C, It's a Wonderful Life, 10, Frank Capra, Donna Reed, 11, 1946
+C, It's a Wonderful Life, 10, Frank Capra, James Steward, 11, 1946
+C, A Clockwork Orange, 10, Stanley Kubrick, Malcolm McDowell, 2, 1971
+C, Harold and Maude, 10, Hal Ashby, Ruth Gordon, 3, 1971
+------------------------------END INVENTORY------------------------------
+Transaction History for Customer 1000: Minnie Mouse
+No transactions found.
+Transaction History for Customer 5000: Freddie Frog
+No transactions found.
+Transaction History for Customer 8000: Wally Wacky
+No transactions found.
+Invalid movie type
+Invalid command.
+Invalid command.
+Customer not found
+Movie not in inventory. Borrow Failed!
+There is no more stock. Borrow Failed
+There is no more stock. Borrow Failed
+There is no more stock. Borrow Failed
+Movie not in inventory. Borrow Failed!
+------------------------------START INVENTORY------------------------------
+F, Annie Hall, 9, Woody Allen, 1977
+F, Fargo, 8, Joel Coen, 1996
+F, National Lampoon's Animal House, 9, John Landis, 1978
+F, Pirates of the Caribbean, 10, Different Years, 2000
+F, Pirates of the Caribbean, 10, Gore Verbinski, 2003
+F, Sleepless in Seattle, 9, Nora Ephron, 1993
+F, When Harry Met Sally, 9, Rob Reiner, 1989
+F, You've Got Mail, 9, Nora Ephron, 1998
+D, Good Morning Vietnam, 9, Barry Levinson, 1988
+D, Same Director Good Morning Vietnam, 10, Barry Levinson, 1988
+D, Unforgiven, 9, Clint Eastwood, 1992
+D, Good Will Hunting, 9, Gus Van Sant, 2000
+D, Silence of the Lambs, 9, Jonathan Demme, 1991
+D, Dogfight, 8, Nancy Savoca, 1991
+D, King of Hearts, 9, Phillippe De Broca, 1967
+D, Schindler's List, 9, Steven Spielberg, 1993
+C, Holiday, 9, George Cukor, Cary Grant, 9, 1938
+C, Holiday, 10, George Cukor, Katherine Hepburn, 9, 1938
+C, Gone With the Wind, 10, Victor Fleming, Clark Gable, 2, 1939
+C, Gone With the Wind, 10, Victor Fleming, Vivien Leigh, 2, 1939
+C, The Wizard of Oz, 10, Victor Fleming, Judy Garland, 7, 1939
+C, The Philadelphia Story, 9, George Cukor, Cary Grant, 5, 1940
+C, The Philadelphia Story, 9, George Cukor, Katherine Hepburn, 5, 1940
+C, The Maltese Falcon, 9, John Huston, Humphrey Bogart, 10, 1941
+C, Casablanca, 10, Michael Curtiz, Humphrey Bogart, 8, 1942
+C, Casablanca, 10, Michael Curtiz, Ingrid Bergman, 8, 1942
+C, It's a Wonderful Life, 10, Frank Capra, Donna Reed, 11, 1946
+C, It's a Wonderful Life, 10, Frank Capra, James Steward, 11, 1946
+C, A Clockwork Orange, 9, Stanley Kubrick, Malcolm McDowell, 2, 1971
+C, Harold and Maude, 0, Hal Ashby, Ruth Gordon, 3, 1971
+------------------------------END INVENTORY------------------------------
+Transaction History for Customer 1000: Minnie Mouse
+B 1000 D D, Good Morning Vietnam, 9, Barry Levinson, 1988
+B 1000 D C, The Philadelphia Story, 9, George Cukor, Katherine Hepburn, 5, 1940
+B 1000 D D, Good Will Hunting, 9, Gus Van Sant, 2000
+B 1000 D C, The Philadelphia Story, 9, George Cukor, Cary Grant, 5, 1940
+B 1000 D C, Harold and Maude, 0, Hal Ashby, Ruth Gordon, 3, 1971
+B 1000 Z F, Fargo, 8, Joel Coen, 1996
+
+Transaction History for Customer 1111: Mickey Mouse
+B 1111 D C, A Clockwork Orange, 9, Stanley Kubrick, Malcolm McDowell, 2, 1971
+B 1111 D C, Harold and Maude, 0, Hal Ashby, Ruth Gordon, 3, 1971
+B 1111 D C, The Maltese Falcon, 9, John Huston, Humphrey Bogart, 10, 1941
+B 1111 D C, Holiday, 9, George Cukor, Cary Grant, 9, 1938
+
+Transaction History for Customer 5000: Freddie Frog
+B 5000 D C, Harold and Maude, 0, Hal Ashby, Ruth Gordon, 3, 1971
+R 5000 D C, Harold and Maude, 0, Hal Ashby, Ruth Gordon, 3, 1971
+B 5000 D C, Harold and Maude, 0, Hal Ashby, Ruth Gordon, 3, 1971
+R 5000 D C, Harold and Maude, 0, Hal Ashby, Ruth Gordon, 3, 1971
+B 5000 D C, Harold and Maude, 0, Hal Ashby, Ruth Gordon, 3, 1971
+R 5000 D C, Harold and Maude, 0, Hal Ashby, Ruth Gordon, 3, 1971
+B 5000 D C, Harold and Maude, 0, Hal Ashby, Ruth Gordon, 3, 1971
+
+Transaction History for Customer 8000: Wally Wacky
+B 8000 D F, You've Got Mail, 9, Nora Ephron, 1998
+R 8000 D F, You've Got Mail, 9, Nora Ephron, 1998
+B 8000 D C, Harold and Maude, 0, Hal Ashby, Ruth Gordon, 3, 1971
+B 8000 D C, Harold and Maude, 0, Hal Ashby, Ruth Gordon, 3, 1971
+B 8000 D F, National Lampoon's Animal House, 9, John Landis, 1978
+
+Transaction History for Customer 8888: Porky Pig
+B 8888 D F, Annie Hall, 9, Woody Allen, 1977
+B 8888 D F, When Harry Met Sally, 9, Rob Reiner, 1989
+B 8888 D D, Silence of the Lambs, 9, Jonathan Demme, 1991
+B 8888 D D, Dogfight, 8, Nancy Savoca, 1991
+B 8888 D C, Harold and Maude, 0, Hal Ashby, Ruth Gordon, 3, 1971
+
+End testStoreFinal
+=====================================
+Done.
+==2386== Memcheck, a memory error detector
+==2386== Copyright (C) 2002-2022, and GNU GPL'd, by Julian Seward et al.
+==2386== Using Valgrind-3.19.0 and LibVEX; rerun with -h for copyright info
+==2386== Command: ./a.out
+==2386== Parent PID: 1740
+==2386== 
+==2386== Conditional jump or move depends on uninitialised value(s)
+==2386==    at 0x402972: Classics::operator==(Movie const&) const (Classics.cpp:17)
+==2386==    by 0x409255: Inventory::Borrow(Customer*, Movie*) (Inventory.cpp:101)
+==2386==    by 0x40603B: Driver::runCommands(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) (Driver.cpp:69)
+==2386==    by 0x40F424: testStore1() (store_test.cpp:61)
+==2386==    by 0x410851: testAll() (store_test.cpp:187)
+==2386==    by 0x40EFC3: main (main.cpp:13)
+==2386== 
+==2386== Conditional jump or move depends on uninitialised value(s)
+==2386==    at 0x402972: Classics::operator==(Movie const&) const (Classics.cpp:17)
+==2386==    by 0x409255: Inventory::Borrow(Customer*, Movie*) (Inventory.cpp:101)
+==2386==    by 0x40603B: Driver::runCommands(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) (Driver.cpp:69)
+==2386==    by 0x40F485: testStore1() (store_test.cpp:64)
+==2386==    by 0x410851: testAll() (store_test.cpp:187)
+==2386==    by 0x40EFC3: main (main.cpp:13)
+==2386== 
+==2386== Conditional jump or move depends on uninitialised value(s)
+==2386==    at 0x402972: Classics::operator==(Movie const&) const (Classics.cpp:17)
+==2386==    by 0x408901: Inventory::addMovie(Movie*) (Inventory.cpp:19)
+==2386==    by 0x410C4B: readMovies() (store_test.cpp:241)
+==2386==    by 0x410803: testStoreFinal() (store_test.cpp:176)
+==2386==    by 0x410860: testAll() (store_test.cpp:190)
+==2386==    by 0x40EFC3: main (main.cpp:13)
+==2386== 
+==2386== Conditional jump or move depends on uninitialised value(s)
+==2386==    at 0x402972: Classics::operator==(Movie const&) const (Classics.cpp:17)
+==2386==    by 0x409255: Inventory::Borrow(Customer*, Movie*) (Inventory.cpp:101)
+==2386==    by 0x40603B: Driver::runCommands(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) (Driver.cpp:69)
+==2386==    by 0x410DB5: readCommands() (store_test.cpp:260)
+==2386==    by 0x41080D: testStoreFinal() (store_test.cpp:178)
+==2386==    by 0x410860: testAll() (store_test.cpp:190)
+==2386==    by 0x40EFC3: main (main.cpp:13)
+==2386== 
+==2386== Conditional jump or move depends on uninitialised value(s)
+==2386==    at 0x402972: Classics::operator==(Movie const&) const (Classics.cpp:17)
+==2386==    by 0x4095A5: Inventory::Return(Customer*, Movie*) (Inventory.cpp:135)
+==2386==    by 0x406638: Driver::runCommands(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) (Driver.cpp:109)
+==2386==    by 0x410DB5: readCommands() (store_test.cpp:260)
+==2386==    by 0x41080D: testStoreFinal() (store_test.cpp:178)
+==2386==    by 0x410860: testAll() (store_test.cpp:190)
+==2386==    by 0x40EFC3: main (main.cpp:13)
+==2386== 
+==2386== 
+==2386== HEAP SUMMARY:
+==2386==     in use at exit: 0 bytes in 0 blocks
+==2386==   total heap usage: 2,957 allocs, 2,957 frees, 1,205,103 bytes allocated
+==2386== 
+==2386== All heap blocks were freed -- no leaks are possible
+==2386== 
+==2386== Use --track-origins=yes to see where uninitialised values come from
+==2386== For lists of detected and suppressed errors, rerun with: -s
+==2386== ERROR SUMMARY: 561 errors from 5 contexts (suppressed: 0 from 0)
+=====================================================
+7. Tests have full code coverage
+=====================================================
+File '/home/cssuwbstudent/alinour/343-movies-alinour64/Classics.cpp':
+Name                                                                                                                                                                                                                                                                                                        Regions    Miss   Cover     Lines    Miss   Cover  Branches    Miss   Cover
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Classics::Classics(int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, int, int)         1       0 100.00%         1       0 100.00%         0       0   0.00%
+Classics::getMovieType[abi:cxx11]() const                                                                                                                                                                                                                                                                         1       0 100.00%         1       0 100.00%         0       0   0.00%
+Classics::getMediaType[abi:cxx11]() const                                                                                                                                                                                                                                                                         1       0 100.00%         1       0 100.00%         0       0   0.00%
+Classics::operator==(Movie const&) const                                                                                                                                                                                                                                                                          5       0 100.00%         4       0 100.00%         6       0 100.00%
+Classics::print(std::ostream&) const                                                                                                                                                                                                                                                                              1       0 100.00%         4       0 100.00%         0       0   0.00%
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+TOTAL                                                                                                                                                                                                                                                                                                             9       0 100.00%        11       0 100.00%         6       0 100.00%
+
+File '/home/cssuwbstudent/alinour/343-movies-alinour64/Comedy.cpp':
+Name                                                                                                                                                                                                                                                                                                        Regions    Miss   Cover     Lines    Miss   Cover  Branches    Miss   Cover
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Comedy::Comedy(int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, int)                                                                                                          1       0 100.00%         1       0 100.00%         0       0   0.00%
+Comedy::getMovieType[abi:cxx11]() const                                                                                                                                                                                                                                                                           1       0 100.00%         1       0 100.00%         0       0   0.00%
+Comedy::getMediaType[abi:cxx11]() const                                                                                                                                                                                                                                                                           1       0 100.00%         1       0 100.00%         0       0   0.00%
+Comedy::operator==(Movie const&) const                                                                                                                                                                                                                                                                            4       0 100.00%         6       0 100.00%         2       0 100.00%
+Comedy::print(std::ostream&) const                                                                                                                                                                                                                                                                                1       0 100.00%         4       0 100.00%         0       0   0.00%
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+TOTAL                                                                                                                                                                                                                                                                                                             8       0 100.00%        13       0 100.00%         2       0 100.00%
+
+File '/home/cssuwbstudent/alinour/343-movies-alinour64/Customer.cpp':
+Name                                                                                                                                                                                                                                                                                                        Regions    Miss   Cover     Lines    Miss   Cover  Branches    Miss   Cover
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Customer::Customer(int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&)                                                                                                           1       0 100.00%         1       0 100.00%         0       0   0.00%
+Customer::~Customer()                                                                                                                                                                                                                                                                                             1       0 100.00%         4       0 100.00%         0       0   0.00%
+Customer::getCustomerID() const                                                                                                                                                                                                                                                                                   1       0 100.00%         1       0 100.00%         0       0   0.00%
+Customer::getLastName[abi:cxx11]() const                                                                                                                                                                                                                                                                          1       1   0.00%         1       1   0.00%         0       0   0.00%
+Customer::getFirstName[abi:cxx11]() const                                                                                                                                                                                                                                                                         1       1   0.00%         1       1   0.00%         0       0   0.00%
+Customer::addTransaction(Transaction const&)                                                                                                                                                                                                                                                                      1       0 100.00%         3       0 100.00%         0       0   0.00%
+Customer::getTransactions() const                                                                                                                                                                                                                                                                                 1       1   0.00%         3       3   0.00%         0       0   0.00%
+Customer::borrowed(Movie*)                                                                                                                                                                                                                                                                                        1       0 100.00%         3       0 100.00%         0       0   0.00%
+Customer::unBorrowed(Movie*)                                                                                                                                                                                                                                                                                      6       1  83.33%         8       0 100.00%         4       2  50.00%
+Customer::isBorrowed(Movie*)                                                                                                                                                                                                                                                                                      7       1  85.71%         8       0 100.00%         4       1  75.00%
+Customer::displayHistory() const                                                                                                                                                                                                                                                                                  5       0 100.00%        12       0 100.00%         4       0 100.00%
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+TOTAL                                                                                                                                                                                                                                                                                                            26       5  80.77%        45       5  88.89%        12       3  75.00%
+
+File '/home/cssuwbstudent/alinour/343-movies-alinour64/Drama.cpp':
+Name                                                                                                                                                                                                                                                                                                        Regions    Miss   Cover     Lines    Miss   Cover  Branches    Miss   Cover
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Drama::Drama(int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, int)                                                                                                            1       0 100.00%         1       0 100.00%         0       0   0.00%
+Drama::getMovieType[abi:cxx11]() const                                                                                                                                                                                                                                                                            1       0 100.00%         1       0 100.00%         0       0   0.00%
+Drama::getMediaType[abi:cxx11]() const                                                                                                                                                                                                                                                                            1       0 100.00%         1       0 100.00%         0       0   0.00%
+Drama::operator==(Movie const&) const                                                                                                                                                                                                                                                                             3       0 100.00%         3       0 100.00%         4       0 100.00%
+Drama::print(std::ostream&) const                                                                                                                                                                                                                                                                                 1       0 100.00%         4       0 100.00%         0       0   0.00%
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+TOTAL                                                                                                                                                                                                                                                                                                             7       0 100.00%        10       0 100.00%         4       0 100.00%
+
+File '/home/cssuwbstudent/alinour/343-movies-alinour64/Driver.cpp':
+Name                                                                                                                                                                                                                                                                                                        Regions    Miss   Cover     Lines    Miss   Cover  Branches    Miss   Cover
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Driver::Driver(Inventory&)                                                                                                                                                                                                                                                                                        1       0 100.00%         1       0 100.00%         0       0   0.00%
+Driver::runCommands(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >)                                                                                                                                                                                                             54       2  96.30%        96       4  95.83%        40       6  85.00%
+Driver::splitLineIntoWords(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&)                                                                                                                                                                                                1       0 100.00%         6       0 100.00%         0       0   0.00%
+Driver::extractTitleFromMovieInfo(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >)                                                                                                       19       1  94.74%        23       1  95.65%        16       6  62.50%
+Driver::extractYearFromMovieInfo(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&)                                                                                                                                                                                          4       1  75.00%         8       1  87.50%         2       1  50.00%
+Driver::extractDirectorFromMovieInfo(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&)                                                                                                                                                                                      1       0 100.00%         3       0 100.00%         0       0   0.00%
+Driver::extractReleaseDateFromMovieInfo(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&)                                                                                                                                                                                   7       2  71.43%        12       3  75.00%         4       2  50.00%
+Driver::extractMajorActorFromMovieInfo(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&)                                                                                                                                                                                    7       1  85.71%        11       2  81.82%         4       1  75.00%
+Driver::extractMediaTypeFromMovieInfo(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&)                                                                                                                                                                                     6       1  83.33%        12       1  91.67%         4       1  75.00%
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+TOTAL                                                                                                                                                                                                                                                                                                           100       8  92.00%       172      12  93.02%        70      17  75.71%
+
+File '/home/cssuwbstudent/alinour/343-movies-alinour64/Inventory.cpp':
+Name                                                                                                                                                                                                                                                                                                        Regions    Miss   Cover     Lines    Miss   Cover  Branches    Miss   Cover
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Inventory::Inventory()                                                                                                                                                                                                                                                                                            1       0 100.00%         1       0 100.00%         0       0   0.00%
+Inventory::~Inventory()                                                                                                                                                                                                                                                                                           2       0 100.00%         8       0 100.00%         2       0 100.00%
+Inventory::addMovie(Movie*)                                                                                                                                                                                                                                                                                       7       1  85.71%        10       3  70.00%         4       1  75.00%
+Inventory::addCustomer(Customer*)                                                                                                                                                                                                                                                                                 1       0 100.00%         3       0 100.00%         0       0   0.00%
+Inventory::findCustomer(int)                                                                                                                                                                                                                                                                                      4       0 100.00%         7       0 100.00%         2       0 100.00%
+Inventory::removeMovie(Movie*)                                                                                                                                                                                                                                                                                    1       1   0.00%         3       3   0.00%         0       0   0.00%
+Inventory::searchMovie(Movie*)                                                                                                                                                                                                                                                                                    4       4   0.00%         7       7   0.00%         2       2   0.00%
+Inventory::displayInventory() const                                                                                                                                                                                                                                                                               2       0 100.00%         5       0 100.00%         2       0 100.00%
+Inventory::sortMovies()                                                                                                                                                                                                                                                                                           1       0 100.00%        30       0 100.00%         0       0   0.00%
+Inventory::Borrow(Customer*, Movie*)                                                                                                                                                                                                                                                                             16       0 100.00%        25       0 100.00%        10       1  90.00%
+Inventory::Return(Customer*, Movie*)                                                                                                                                                                                                                                                                             16       1  93.75%        27       2  92.59%        10       2  80.00%
+Inventory.cpp:Inventory::Inventory()::$_0::operator()(int) const                                                                                                                                                                                                                                                  1       0 100.00%         1       0 100.00%         0       0   0.00%
+Inventory.cpp:Inventory::sortMovies()::$_1::operator()(Movie const*, Movie const*) const                                                                                                                                                                                                                         20       1  95.00%        27       2  92.59%        18       1  94.44%
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+TOTAL                                                                                                                                                                                                                                                                                                            76       8  89.47%       154      17  88.96%        50       7  86.00%
+
+File '/home/cssuwbstudent/alinour/343-movies-alinour64/Movie.cpp':
+Name                                                                                                                                                                                                                                                                                                        Regions    Miss   Cover     Lines    Miss   Cover  Branches    Miss   Cover
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Movie::Movie(int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, int)                                                                                                            1       0 100.00%         1       0 100.00%         0       0   0.00%
+Movie::Movie(int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, int, int)               1       0 100.00%         1       0 100.00%         0       0   0.00%
+Movie::~Movie()                                                                                                                                                                                                                                                                                                   1       0 100.00%         1       0 100.00%         0       0   0.00%
+Movie::getTitle[abi:cxx11]() const                                                                                                                                                                                                                                                                                1       0 100.00%         1       0 100.00%         0       0   0.00%
+Movie::getDirector[abi:cxx11]() const                                                                                                                                                                                                                                                                             1       0 100.00%         1       0 100.00%         0       0   0.00%
+Movie::getYear() const                                                                                                                                                                                                                                                                                            1       0 100.00%         1       0 100.00%         0       0   0.00%
+Movie::getStock() const                                                                                                                                                                                                                                                                                           1       0 100.00%         1       0 100.00%         0       0   0.00%
+Movie::getMajorActor[abi:cxx11]() const                                                                                                                                                                                                                                                                           1       0 100.00%         1       0 100.00%         0       0   0.00%
+Movie::getMonth() const                                                                                                                                                                                                                                                                                           1       0 100.00%         1       0 100.00%         0       0   0.00%
+Movie::setTitle(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&)                                                                                                                                                                                                           1       1   0.00%         1       1   0.00%         0       0   0.00%
+Movie::setDirector(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&)                                                                                                                                                                                                        1       1   0.00%         1       1   0.00%         0       0   0.00%
+Movie::setYear(int)                                                                                                                                                                                                                                                                                               1       1   0.00%         1       1   0.00%         0       0   0.00%
+Movie::setStock(int)                                                                                                                                                                                                                                                                                              4       1  75.00%         7       2  71.43%         2       1  50.00%
+Movie::setMediaType(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&)                                                                                                                                                                                                       1       0 100.00%         3       0 100.00%         0       0   0.00%
+Movie::setMajorActor(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&)                                                                                                                                                                                                      1       1   0.00%         3       3   0.00%         0       0   0.00%
+Movie::setMonth(int)                                                                                                                                                                                                                                                                                              1       1   0.00%         1       1   0.00%         0       0   0.00%
+Movie::increaseStock()                                                                                                                                                                                                                                                                                            1       0 100.00%         4       0 100.00%         0       0   0.00%
+Movie::decreaseStock()                                                                                                                                                                                                                                                                                            4       0 100.00%         8       0 100.00%         2       0 100.00%
+operator<<(std::ostream&, Movie const&)                                                                                                                                                                                                                                                                           1       0 100.00%         4       0 100.00%         0       0   0.00%
+Movie::operator<(Movie const&) const                                                                                                                                                                                                                                                                             24      17  29.17%        28      23  17.86%        24      17  29.17%
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+TOTAL                                                                                                                                                                                                                                                                                                            49      23  53.06%        70      32  54.29%        28      18  35.71%
+
+File '/home/cssuwbstudent/alinour/343-movies-alinour64/MovieFactory.cpp':
+Name                                                                                                                                                                                                                                                                                                                                                                                                Regions    Miss   Cover     Lines    Miss   Cover  Branches    Miss   Cover
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+MovieFactory::CreateMovie(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&)                                                                                                                                                                                                                                                                                        10       0 100.00%        21       0 100.00%         6       0 100.00%
+MovieFactory::CreateMovie(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, int)                                                                                                      7       1  85.71%        10       2  80.00%         4       1  75.00%
+MovieFactory::CreateMovie(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, int, int)         4       1  75.00%         8       2  75.00%         2       1  50.00%
+MovieFactory::splitLine(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&)                                                                                                                                                                                                                                                                                           3       0 100.00%         9       0 100.00%         2       0 100.00%
+MovieFactory::trim(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&)                                                                                                                                                                                                                                                                                                5       0 100.00%        12       0 100.00%         4       0 100.00%
+MovieFactory::extractAllButLastTwoWords(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&)                                                                                                                                                                                                                                                                           8       0 100.00%        16       0 100.00%         6       1  83.33%
+MovieFactory::extractMonthAndYear(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, int&, int&)                                                                                                                                                                                                                                                                     5       0 100.00%        13       0 100.00%         4       1  75.00%
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+TOTAL                                                                                                                                                                                                                                                                                                                                                                                                    42       2  95.24%        89       4  95.51%        28       4  85.71%
+
+File '/home/cssuwbstudent/alinour/343-movies-alinour64/Transaction.cpp':
+Name                                                                                                                                                                                                                                                                                                                                                                                                Regions    Miss   Cover     Lines    Miss   Cover  Branches    Miss   Cover
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Transaction::Transaction(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, Customer const*, Movie const*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >)                                                                                                1       0 100.00%         1       0 100.00%         0       0   0.00%
+Transaction::getType[abi:cxx11]() const                                                                                                                                                                                                                                                                                                                                                                   1       0 100.00%         1       0 100.00%         0       0   0.00%
+Transaction::getCustomer() const                                                                                                                                                                                                                                                                                                                                                                          1       0 100.00%         1       0 100.00%         0       0   0.00%
+Transaction::getMovie() const                                                                                                                                                                                                                                                                                                                                                                             1       1   0.00%         1       1   0.00%         0       0   0.00%
+Transaction::display() const                                                                                                                                                                                                                                                                                                                                                                              7       2  71.43%        15       4  73.33%         4       2  50.00%
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+TOTAL                                                                                                                                                                                                                                                                                                                                                                                                    11       3  72.73%        19       5  73.68%         4       2  50.00%
+
+File '/home/cssuwbstudent/alinour/343-movies-alinour64/main.cpp':
+Name                                                                                                                                                                                                                                                                                                                                                                                                Regions    Miss   Cover     Lines    Miss   Cover  Branches    Miss   Cover
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+main                                                                                                                                                                                                                                                                                                                                                                                                      1       0 100.00%         5       0 100.00%         0       0   0.00%
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+TOTAL                                                                                                                                                                                                                                                                                                                                                                                                     1       0 100.00%         5       0 100.00%         0       0   0.00%
+
+File '/home/cssuwbstudent/alinour/343-movies-alinour64/store_test.cpp':
+Name                                                                                                                                                                                                                                                                                                                                                                                                Regions    Miss   Cover     Lines    Miss   Cover  Branches    Miss   Cover
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+testStore1()                                                                                                                                                                                                                                                                                                                                                                                              1       0 100.00%        23       0 100.00%         0       0   0.00%
+testStore2()                                                                                                                                                                                                                                                                                                                                                                                              1       0 100.00%        21       0 100.00%         0       0   0.00%
+testStore3()                                                                                                                                                                                                                                                                                                                                                                                              1       0 100.00%        21       0 100.00%         0       0   0.00%
+testStoreFinal()                                                                                                                                                                                                                                                                                                                                                                                          1       0 100.00%         9       0 100.00%         0       0   0.00%
+testAll()                                                                                                                                                                                                                                                                                                                                                                                                 1       0 100.00%         6       0 100.00%         0       0   0.00%
+readCustomers()                                                                                                                                                                                                                                                                                                                                                                                          11       2  81.82%        23       4  82.61%         8       3  62.50%
+readMovies()                                                                                                                                                                                                                                                                                                                                                                                             10       1  90.00%        17       3  82.35%         8       2  75.00%
+readCommands()                                                                                                                                                                                                                                                                                                                                                                                            5       0 100.00%        12       1  91.67%         4       1  75.00%
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+TOTAL                                                                                                                                                                                                                                                                                                                                                                                                    31       3  90.32%       132       8  93.94%        20       6  70.00%
+=====================================================
+The lines below were never executed
+=====================================================
+   15|      0|string Customer::getLastName() const { return lastName; }
+   17|      0|string Customer::getFirstName() const { return firstName; }
+   24|      0|const vector<Transaction> &Customer::getTransactions() const {
+   26|      0|  return transactions;
+   27|      0|}
+   24|      0|        cout << "Customer not found." << endl;
+   25|      0|      }
+  112|      0|        cout << "Invalid movie type." << endl;
+  113|      0|      }
+  149|      0|  return "";
+  158|      0|  return 0;
+  171|      0|    return {0, 0};
+  172|      0|  }
+  178|      0|  return {0, 0};
+  187|      0|      return "";
+  188|      0|    }
+  205|      0|  return "";
+   44|      0|      if (pair.first == key) { // If the key already exists, update the value
+   45|      0|        pair.second = value;
+   46|      0|        return;
+   47|      0|      }
+   48|      0|    }
+   86|      0|    throw out_of_range("Key not found"); // Key not found
+   20|      0|      movies[i]->setStock(movie->getStock() + movies[i]->getStock());
+   21|      0|      return;
+   22|      0|    }
+   40|      0|void Inventory::removeMovie(Movie *movie) {
+   42|      0|  movies.erase(remove(movies.begin(), movies.end(), movie), movies.end());
+   43|      0|}
+   45|      0|Movie *Inventory::searchMovie(Movie *movie) {
+   46|      0|  auto it = find(movies.begin(), movies.end(), movie);
+   47|      0|  if (it != movies.end()) {
+   48|      0|    return *it;
+   49|      0|  }
+   50|      0|  return nullptr;
+   51|      0|}
+   88|      0|         default:
+   89|      0|           return false;
+  130|      0|    return false; // Return false if the customer is null
+  131|      0|  }
+   30|      0|void Movie::setTitle(const string &newTitle) { title = newTitle; }
+   32|      0|void Movie::setDirector(const string &newDirector) { director = newDirector; }
+   34|      0|void Movie::setYear(int newYear) { year = newYear; }
+   40|      0|    stock = 0;
+   41|      0|  }
+   48|      0|void Movie::setMajorActor(const string &newMajorActor) {
+   49|      0|  majorActor = newMajorActor;
+   50|      0|}
+   52|      0|void Movie::setMonth(int newMonth) { month = newMonth; }
+   80|      0|  switch (getMovieType()[0]) {
+   81|      0|  case 'F':
+   82|      0|    if (getTitle() != other.getTitle()) {
+   83|      0|      return getTitle() < other.getTitle();
+   84|      0|    }
+   85|      0|    return getYear() < other.getYear();
+   86|      0|  case 'D':
+   87|      0|    if (getDirector() != other.getDirector()) {
+   88|      0|      return getDirector() < other.getDirector();
+   89|      0|    }
+   90|      0|    return getTitle() < other.getTitle();
+   91|      0|  case 'C':
+   92|      0|    if (getYear() != other.getYear()) {
+   93|      0|      return getYear() < other.getYear();
+   94|      0|    }
+   95|      0|    if (getMonth() != other.getMonth()) {
+   96|      0|      return getMonth() < other.getMonth();
+   97|      0|    }
+   98|      0|    return getMajorActor() < other.getMajorActor();
+   99|      0|  default:
+  100|      0|    return false;
+  101|      0|  }
+  102|      0|}
+   52|      0|  cerr << "Invalid movie type" << endl;
+   53|      0|  return nullptr;
+   69|      0|  cerr << "Invalid movie type" << endl;
+   70|      0|  return nullptr;
+   16|      0|const Movie *Transaction::getMovie() const { return movie; }
+   25|      0|    cout << " N/A ";
+   26|      0|  }
+   34|      0|    cout << " N/A ";
+   35|      0|  }
+  214|      0|          cout << "Invalid line format: " << line << endl;
+  215|      0|        }
+  221|      0|    cout << "Failed to open file." << endl;
+  222|      0|  }
+  232|      0|    cerr << "Unable to open file data4movies.txt";
+  233|      0|    exit(1);
+  234|      0|  }
+  257|      0|  string line;
+Mon Jun  5 00:37:38 UTC 2023
+=====================================================
+To create an output.txt file with all the output from this script
+Run the below command
+      ./create-output.sh > output.txt 2>&1 
+=====================================================
